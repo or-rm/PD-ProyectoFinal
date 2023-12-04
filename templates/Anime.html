@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href='/static/style.css' />
+		<meta charset="UTF-8" />
+		<title>Anime Recomendado</title>
+	</head>
+	<body>
+		<form method="POST">
+		    <input name="text">
+		    <input type="submit">
+		</form>
+
+		<div class=page>
+		{% if tables %}
+  	<h1>Recomendaciones</h1>
+  	{% for table_x in tables %}
+    	{{ table_x|safe }}
+  	{% endfor %}
+		{% endif %}
+</div>
+	</body>
+</html>
